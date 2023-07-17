@@ -69,7 +69,7 @@ public class GUI extends JFrame {
 
                 if(isAtLeastOne) {
                     int length = slider.getValue();
-                    String password = generator.generate(length,
+                    String password = generator.getPassword(length,
                             lowercaseToggle.isSelected(),
                             uppercaseToggle.isSelected(),
                             numbersToggle.isSelected(),
