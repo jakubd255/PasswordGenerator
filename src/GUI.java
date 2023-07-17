@@ -79,7 +79,7 @@ public class GUI extends JFrame {
                 }
                 else {
                     String message = "At least one option must be selected!";
-                    JOptionPane.showMessageDialog(null, message, "Dialog", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
