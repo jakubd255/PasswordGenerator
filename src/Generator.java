@@ -25,7 +25,7 @@ public class Generator {
         return new String(chars);
     }
 
-    public String generate(int length, boolean lowercase, boolean uppercase, boolean numbers, boolean symbols) {
+    public String getPassword(int length, boolean lowercase, boolean uppercase, boolean numbers, boolean symbols) {
         String charList = "";
         if(lowercase) charList += LOWERCASE;
         if(numbers) charList += NUMBERS;
