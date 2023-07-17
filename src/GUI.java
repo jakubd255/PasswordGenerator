@@ -5,11 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GUI extends JFrame{
+public class GUI extends JFrame {
     private final Generator generator;
 
-    public GUI()
-    {
+    public GUI() {
         super("Password Generator");
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -20,7 +19,7 @@ public class GUI extends JFrame{
         addComponents();
     }
 
-    private void addComponents(){
+    private void addComponents() {
         JTextArea passwordOutput = new JTextArea();
         passwordOutput.setEditable(false);
         passwordOutput.setBounds(35, 50, 430, 30);
@@ -68,8 +67,7 @@ public class GUI extends JFrame{
                         numbersToggle.isSelected() ||
                         symbolsToggle.isSelected();
 
-                if(isAtLeastOne)
-                {
+                if(isAtLeastOne) {
                     int length = slider.getValue();
                     String password = generator.generate(length,
                             lowercaseToggle.isSelected(),
@@ -79,8 +77,7 @@ public class GUI extends JFrame{
                     );
                     passwordOutput.setText(password);
                 }
-                else
-                {
+                else {
                     String message = "At least one option must be selected!";
                     JOptionPane.showMessageDialog(null, message, "Dialog", JOptionPane.ERROR_MESSAGE);
                 }
