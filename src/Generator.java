@@ -13,7 +13,7 @@ public class Generator{
         random = new Random();
     }
 
-    public String shuffleString(String string) {
+    private String shuffleString(String string){
         char[] chars = string.toCharArray();
 
         for (int i = chars.length - 1; i > 0; i--) {
