@@ -20,18 +20,23 @@ public class GUI extends JFrame {
     }
 
     private void addComponents() {
+        //Password output
         JTextArea passwordOutput = new JTextArea();
         passwordOutput.setEditable(false);
         passwordOutput.setBounds(35, 50, 430, 30);
         passwordOutput.setFont(new Font("Dialog", Font.PLAIN, 22));
+        passwordOutput.setFocusable(false);
         add(passwordOutput);
 
+        //Password length info
         JLabel sliderLabel = new JLabel("Password length: 15");
         sliderLabel.setBounds(35, 130, 200, 20);
         add(sliderLabel);
 
+        //Password length slider
         JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 30, 15);
         slider.setBounds(20, 160, 460, 20);
+        slider.setFocusable(false);
         slider.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
@@ -40,25 +45,35 @@ public class GUI extends JFrame {
         });
         add(slider);
 
+        //Lowercase toggle button
         JToggleButton lowercaseToggle = new JToggleButton("Lowercase");
         lowercaseToggle.setBounds(35, 230, 215, 50);
         lowercaseToggle.setSelected(true);
+        lowercaseToggle.setFocusable(false);
         add(lowercaseToggle);
 
+        //Uppercase toggle button
         JToggleButton uppercaseToggle = new JToggleButton("Uppercase");
         uppercaseToggle.setBounds(250, 230, 215, 50);
+        uppercaseToggle.setFocusable(false);
         add(uppercaseToggle);
 
+        //Numbers toggle button
         JToggleButton numbersToggle = new JToggleButton("Numbers");
         numbersToggle.setBounds(35, 280, 215, 50);
+        numbersToggle.setFocusable(false);
         add(numbersToggle);
 
-        JToggleButton symbolsToggle = new JToggleButton("Special");
+        //Symbols toggle button
+        JToggleButton symbolsToggle = new JToggleButton("Symbols");
         symbolsToggle.setBounds(250, 280, 215, 50);
+        symbolsToggle.setFocusable(false);
         add(symbolsToggle);
 
+        //Generate button
         JButton generateButton = new JButton("Generate");
         generateButton.setBounds(35, 380, 430, 50);
+        generateButton.setFocusable(false);
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
