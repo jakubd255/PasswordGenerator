@@ -1,4 +1,4 @@
-# PasswordGenerator
+# Password Generator
 
 Simple password generator written with Java Swing
 
